@@ -1,0 +1,31 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:View controllerName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.controller.PurchaseOrderPreview" xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:commons="sap.ui.commons" xmlns:objectPage="sap.uxap"
+	xmlns:purch="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view" xmlns:items="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view">
+	<Page class="sapUiFioriObjectPage" id="PurchaseOrdersPreview" enableScrolling="false">
+		<content>
+			<TabContainer items="{/C_PurOrderDraftForMngPurReqn}" id="idTabContainer" itemClose="tabitemCloseHandler">
+				<items id="idItemsPODraft">
+					<TabContainerItem id="idTabContainerItem" name="{path:'SerialNumber',formatter:'.formatter.formatDraftId'}">
+						<content>
+							<core:Fragment fragmentName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view.POPreviewObjectPage" type="XML"/>
+						</content>
+					</TabContainerItem>
+				</items>
+			</TabContainer>
+		</content>
+		<!--<footer>-->
+		<!--	<OverflowToolbar >-->
+		<!--		<Button id='idBMsgPopover' icon="sap-icon://message-popup" text="{/messagesLength}" type="Emphasized" press="handleMessagePopoverPress"-->
+		<!--			visible="false"/>-->
+		<!--		<ToolbarSpacer/>-->
+		<!--		<Button enabled="true" id='idButPOSubmit' press='fnCreatePurchaseOrder' type="Emphasized" text="{i18n>SAVE}"/>-->
+		<!--		<Button enabled="true" id='idButPOCancel' press='fnPopOverDiscard' text="{i18n>Cancel}"/>-->
+		<!--	</OverflowToolbar>-->
+		<!--</footer>-->
+	</Page>
+</core:View>

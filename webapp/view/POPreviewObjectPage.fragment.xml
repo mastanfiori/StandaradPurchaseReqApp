@@ -1,0 +1,45 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:objectPage="sap.uxap">
+	<objectPage:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" showTitleInHeaderContent="true" showEditHeaderButton="false"
+		upperCaseAnchorBar="false" showFooter="true">
+		<objectPage:headerTitle>
+			<objectPage:ObjectPageHeader objectTitle="{i18n>NewPO}" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false"
+				isObjectSubtitleAlwaysVisible="false"></objectPage:ObjectPageHeader>
+		</objectPage:headerTitle>
+		<objectPage:headerContent></objectPage:headerContent>
+		<objectPage:sections>
+			<objectPage:ObjectPageSection title="{i18n>GeneralInfo}">
+				<objectPage:subSections>
+					<objectPage:ObjectPageSubSection id="idGenInfoBlockSS" mode="Expanded">
+						<objectPage:blocks>
+							<core:Fragment fragmentName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view.POPreviewGenInfo" type="XML"/>
+						</objectPage:blocks>
+					</objectPage:ObjectPageSubSection>
+				</objectPage:subSections>
+			</objectPage:ObjectPageSection>
+			<objectPage:ObjectPageSection title="{i18n>Items}" titleUppercase="false">
+				<objectPage:subSections>
+					<objectPage:ObjectPageSubSection>
+						<objectPage:blocks>
+							<core:Fragment fragmentName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view.POPreviewItems" type="XML"/>
+						</objectPage:blocks>
+					</objectPage:ObjectPageSubSection>
+				</objectPage:subSections>
+			</objectPage:ObjectPageSection>
+		</objectPage:sections>
+			<objectPage:footer class="sapUxAPObjectPageFooter ">
+			<Toolbar class="sapUxAPObjectPageFloatingFooter" >
+				<Button id='idBMsgPopover' icon="sap-icon://message-popup" text="{/messagesLength}" type="Emphasized" press="handleMessagePopoverPress"
+					visible="false"/>
+				<ToolbarSpacer/>
+				<Button enabled="true" id='idButPOSubmit' press='fnCreatePurchaseOrder' type="Emphasized" text="{i18n>SAVE}"/>
+				<Button enabled="true" id='idButPOCancel' press='fnPopOverDiscard' text="{i18n>Cancel}"/>
+			</Toolbar>
+		</objectPage:footer>
+	</objectPage:ObjectPageLayout>
+</core:FragmentDefinition>

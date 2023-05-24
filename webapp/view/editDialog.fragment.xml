@@ -1,0 +1,65 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition class="sapUiSizeCompact" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:filterBar="sap.ui.comp.filterbar" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns="sap.m">
+	<Dialog class="sapUiNoMargin sapUiNoContentPadding" contentWidth="40%"
+		title="{parts:[{path:'i18n>ED'},{path:'/Purchaserequisitionitemtext'},{path:'/Material'}],formatter:'.formatter.formatDisplayText'}"
+		id="editDialog">
+		<l:Grid id="editGrid" defaultSpan="L12 M6 S12" width="auto">
+			<l:content>
+				<f:SimpleForm class="editableForm" columnsL="2" columnsM="2" editable="true" emptySpanL="2" emptySpanM="2" id="idRenewContractForm"
+					labelSpanL="5" labelSpanM="5" layout="ResponsiveGridLayout" maxContainerCols="2">
+					<f:content>
+						<Label id="labelSOSPrp" text="{i18n>Pro_Sor}" textAlign="End" class="sapUiSizeCompact"/>
+						<Link press="handleSoSDialog" id="linkSOSEditFgt" ariaLabelledBy="labelSOSPrp"
+							text="{parts:[{path:'/Sos_count'},{path:'i18n>SOS'}],formatter:'.formatter.formatDisplayText'}"
+							enabled="{path: '/Sos_count', formatter:'.formatter.formatLinkDisable'}" class="marginForText"/>
+						<Label text="{i18n>Supplier}" textAlign="End" class="sapUiSizeCompact"/>
+						<MultiInput id="supplierF4multiInput" placeholder="{i18n>Supplier}"
+							value="{parts:[{path:'/Fixedvendor'},{path:'/Supplier'}],formatter:'.formatter.formatSupplierText'}"
+							valueHelpRequest="onSupplierValueHelpRequest" liveChange="onChangeSupplier"
+							enabled="{path: '/PurchasingDocumentItemCategory', formatter:'.formatter.formatDocItemCategory'}"/>
+						<Label text="{i18n>DD}" textAlign="End" class="sapUiSizeCompact"/>
+						<DatePicker id="Date" visible="{path:'/ProductType', formatter:'.formatter.formatEditForOtherPR'}"
+							value="{path:'/Deliverydate' ,formatter:'.formatter.formatEditDeliveryDate', formatOptions: {  style: 'medium', UTC: true, strictParsing: true }}"
+							change="onDateChanged" displayFormat="{parts:[{path:''}],formatter:'.formatter.dateFormatType'}" valueFormat="{parts:[{path:''}],formatter:'.formatter.dateFormatType'}" 
+							enabled="{path: '/PurchasingDocumentItemCategory', formatter:'.formatter.formatEditForLimit'}"
+							valueState="{parts: [{path: '/PurchasingDocumentItemCategory'},{path: '/Deliverydate'}],formatter:'.formatter.formatDateValidation'}"/>
+						<Label text="{i18n>SDate}" textAlign="End" class="sapUiSizeCompact"/>
+						<DatePicker id="StartDate" visible="{path:'/ProductType', formatter:'.formatter.formatEditForService'}"
+							value="{path:'/PerformancePeriodStartDate' ,formatter:'.formatter.formatEditDeliveryDate',formatOptions: {style: 'medium', UTC: true, strictParsing: true}}"
+							change="onStartDateChanged" displayFormat="{parts:[{path:''}],formatter:'.formatter.dateFormatType'}" valueFormat="{parts:[{path:''}],formatter:'.formatter.dateFormatType'}"
+							enabled="{path: '/PurchasingDocumentItemCategory', formatter:'.formatter.formatEditForLimit'}"/>
+							<!--valueState="{parts: [{path: '/PurchasingDocumentItemCategory'},{path: '/PerformancePeriodStartDate'}],formatter:'.formatter.formatDateValidation'}"-->
+						<Label text="{i18n>EDate}" textAlign="End" class="sapUiSizeCompact"/>
+						<DatePicker id="EndDate" visible="{path:'/ProductType', formatter:'.formatter.formatEditForService'}"
+							value="{path:'/PerformancePeriodEndDate' ,formatter:'.formatter.formatEditDeliveryDate', formatOptions: { style: 'medium',  UTC: true, strictParsing: true}}"
+							change="onEndDateChanged"  displayFormat="{parts:[{path:''}],formatter:'.formatter.dateFormatType'}" valueFormat="{parts:[{path:''}],formatter:'.formatter.dateFormatType'}"
+							enabled="{path: '/PurchasingDocumentItemCategory', formatter:'.formatter.formatEditForLimit'}"/>
+							<!--valueState="{parts: [{path: '/PurchasingDocumentItemCategory'},{path: '/PerformancePeriodEndDate'}],formatter:'.formatter.formatDateValidation'}"-->
+						<Label text="{i18n>Quantity}" width="100%" textAlign="End" class="sapUiSizeCompact"/>
+						<l:Grid id="editGridQuantity" hSpacing="0" vSpacing="1" defaultSpan="L6 M6 S6">
+							<l:content>
+								<Input id="idEditQuantity" value="{path: '/Quantity'}"
+									enabled="{path: '/PurchasingDocumentItemCategory', formatter:'.formatter.formatEditForLimit'}"
+									valueState="{path: '/Quantity' ,formatter:'.formatter.formatEditQuantity'}" liveChange="onInputQuantityChanged"/>
+								<Input id="idInputQuantity" value="{/Materialbaseunit}" class="marginForInput" editable="false"/>
+							</l:content>
+						</l:Grid>
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+		<beginButton>
+			<Button text="{i18n>OK}" app:dialogType="Std" press="onDialogOkButton" id="idEditOk"
+				enabled="{parts: [{path: '/PurchasingDocumentItemCategory'},{path: '/Deliverydate'}],formatter:'.formatter.formatDateOkButton'}" width="20%"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}" app:dialogType="Std" press="onEditDialogCloseButton" width="20%"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,36 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Popover showHeader="true" contentWidth="320px" verticalScrolling="false" placement="Auto" title="{i18n>Supplier}"
+		id="BusinessCardFragmentId" afterClose="onCallAfterClose">
+		<content>
+			<StandardListItem title="{/Vendorname}" description="{/Designation}" icon="sap-icon://person-placeholder" iconDensityAware="false"
+				iconInset="false"/>
+			<ObjectHeader title="{i18n>Contact}">
+				<attributes>
+					<ObjectAttribute text="{i18n>Mobile}:"/>
+					<ObjectAttribute text="{/Mobilenumber}" id="idBusinessCardMobile" active="true" press="callBusinessCard"/>
+					<ObjectAttribute text="{i18n>TLPH}:"/>
+					<ObjectAttribute text="{/Worknumber}" id="idBusinessCardTelNumber" active="true" press="callBusinessCard"/>
+					<ObjectAttribute text="{i18n>Email}:"/>
+					<ObjectAttribute text="{/Email}" id="idBusinessCardEmail" active="true" press="emailBusinessCard"/>
+				</attributes>
+			</ObjectHeader>
+			<ObjectHeader title="{i18n>Company}">
+				<attributes>
+					<ObjectAttribute text="{i18n>Name}:"/>
+					<ObjectAttribute text="{/Companyname}"/>
+				</attributes>
+			</ObjectHeader>
+		</content>
+		<!-- <footer>
+    <Toolbar>
+    <Button text="{i18n>SM}" width="100%"/>
+    </Toolbar>
+    </footer> -->
+	</Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,36 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m" 	xmlns:smartTable="sap.ui.comp.smarttable">
+		<Table delete="handleItemDelete"  fixedLayout="false" items="{path:'to_PurOrderItmDrftForMngPurReqn',sorter: {
+				path: 'PurchaseRequisitionItem'
+			}}" mode="Delete" showSeparators="All"  >
+			<columns design="Transparent">
+				<Column  hAlign="Begin" id="Description" vAlign="Middle" width="25%">
+					<Text text="{i18n>Material}"/>
+				</Column>
+				<Column demandPopin="true" minScreenWidth="Desktop" hAlign="End" id="Quantity" vAlign="Middle" width="20%">
+					<Text text="{i18n>Quantity}"/>
+				</Column>
+				<Column demandPopin="true" minScreenWidth="Desktop" hAlign="Begin" id="Requirementno" vAlign="Middle" width="25%">
+					<Text text="{i18n>REQNO}"/>
+				</Column>
+				<Column demandPopin="true" minScreenWidth="Desktop" footer="true" hAlign="End" id="Totalvalue" vAlign="Middle" width="25%">
+					<Text text="{i18n>TOTALVALUE}"/>
+					<!--<footer hAlign="Left">-->
+					<!--	<Text text="{parts:[{path:'i18n>TOTAL'},{path:'PurchaseOrderNetPriceAmount'},{path:'DocumentCurrency'}],formatter:'.formatter.formatTotal'}"/>-->
+					<!--</footer>-->
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<Text text="{parts:[{path:'PurchasingDocumentItemText'},{path:'Material'}],formatter:'.formatter.formatDescMatnr'}"/>
+					<Text text="{parts:[{path:'OrderQuantity'},{path:'OrderQuantityUnit'}],formatter:'.formatter.formatQuantity'}"/>
+					<Text text="{parts:[{path:'PurchaseRequisition'},{path:'PurchaseRequisitionItem'}],formatter:'.formatter.formatPRItmNum'}"/>
+					<Text text="{parts:[{path:'NetPriceAmount'},{path:'DocumentCurrency'}],formatter:'.formatter.formatCurrency'}"/>
+				</ColumnListItem>
+			</items>
+		</Table>
+</core:FragmentDefinition>

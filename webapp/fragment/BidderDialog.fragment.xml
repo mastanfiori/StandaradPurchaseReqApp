@@ -1,0 +1,17 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition controllerName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.controller.RFQPreview" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns="sap.m">
+	<SelectDialog growingThreshold="20" confirm="onPressOkBidder" contentHeight="40%" contentWidth="40%" id="idBidderList"
+		items="{path: '/C_RfqBidderVH'}" multiSelect="true" noDataText="{i18n>NoBidder}" rememberSelections="true" cancel="bidderclose" search="onSearchBidder"
+		title="{parts:[{path:'i18n>BidderOne'},{path:'i18n>BidderTwo'}],formatter:'ui.ssuite.s2p.mm.pur.pr.prcss.s1.s1.util.Formatter.formatitext'}">
+		<StandardListItem
+			description="{parts:[{path:'Supplier'},{path:'AddressID'},{path:'PhoneNumber'}], formatter:'.formatter.formatDisplayBidder'}"
+			id="idBiddersListItem"
+			info="{parts:[{path:'SupplierName'},{path:'PhoneNumber'},{path:'EmailAddress'}], formatter:'.formatter.formatDisplayBidder'}"
+			title="{Supplier}" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

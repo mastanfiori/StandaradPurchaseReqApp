@@ -1,0 +1,1318 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component.js",
+			"size": 2664,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/UIComponent.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ErrorHandler.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/models.js"
+			]
+		},
+		{
+			"name": "Component-h2-preload-dbg.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component-h2-preload.js",
+			"size": 12094,
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/f/DynamicPage.js",
+				"sap/f/DynamicPageHeader.js",
+				"sap/f/DynamicPageTitle.js",
+				"sap/m/App.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MultiInput.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Page.js",
+				"sap/m/Popover.js",
+				"sap/m/SearchField.js",
+				"sap/m/SelectDialog.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/TabContainer.js",
+				"sap/m/TabContainerItem.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/ToggleButton.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/comp/smartfield/SmartLabel.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js",
+				"sap/uxap/ObjectPageHeader.js",
+				"sap/uxap/ObjectPageLayout.js",
+				"sap/uxap/ObjectPageSection.js",
+				"sap/uxap/ObjectPageSubSection.js",
+				"sap/viz/ui5/controls/VizFrame.js",
+				"sap/viz/ui5/controls/common/feeds/FeedItem.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/localService/mockserver.js"
+			],
+			"included": [
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/manifest.json",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/App.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ContractPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ErrorHandler.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/PurchaseOrderPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/RFQPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/Worklist.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BidderDialog.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BusinessCard.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardCtr.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardPO.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ar.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_bg.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ca.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_cs.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_da.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_de.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_el.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_sappsd.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_saptrc.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_es.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_et.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hu.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_it.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_iw.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ja.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_kk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ko.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lt.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lv.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ms.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_nl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_no.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pt.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ro.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ru.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sh.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sv.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_th.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_tr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_uk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_vi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_CN.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_TW.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/models.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/App.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/ContractPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewItems.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewItems.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewObjectPage.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/PurchaseOrderPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/RFQPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/SosDialog.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/Worklist.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/editDialog.fragment.xml"
+			]
+		},
+		{
+			"name": "Component-h2-preload.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component-h2-preload.js",
+			"size": 11991,
+			"merged": true,
+			"required": [
+				"sap/f/DynamicPage.js",
+				"sap/f/DynamicPageHeader.js",
+				"sap/f/DynamicPageTitle.js",
+				"sap/m/App.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MultiInput.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Page.js",
+				"sap/m/Popover.js",
+				"sap/m/SearchField.js",
+				"sap/m/SelectDialog.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/TabContainer.js",
+				"sap/m/TabContainerItem.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/ToggleButton.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/comp/smartfield/SmartLabel.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js",
+				"sap/uxap/ObjectPageHeader.js",
+				"sap/uxap/ObjectPageLayout.js",
+				"sap/uxap/ObjectPageSection.js",
+				"sap/uxap/ObjectPageSubSection.js",
+				"sap/viz/ui5/controls/VizFrame.js",
+				"sap/viz/ui5/controls/common/feeds/FeedItem.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/localService/mockserver.js"
+			],
+			"included": [
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/manifest.json",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/App.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ContractPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ErrorHandler.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/PurchaseOrderPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/RFQPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/Worklist.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BidderDialog.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BusinessCard.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardCtr.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardPO.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ar.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_bg.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ca.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_cs.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_da.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_de.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_el.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_sappsd.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_saptrc.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_es.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_et.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hu.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_it.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_iw.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ja.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_kk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ko.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lt.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lv.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ms.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_nl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_no.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pt.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ro.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ru.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sh.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sv.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_th.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_tr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_uk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_vi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_CN.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_TW.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/models.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/App.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/ContractPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewItems.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewItems.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewObjectPage.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/PurchaseOrderPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/RFQPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/SosDialog.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/Worklist.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/editDialog.fragment.xml"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component-preload.js",
+			"size": 600992,
+			"merged": true,
+			"required": [
+				"sap/f/DynamicPage.js",
+				"sap/f/DynamicPageHeader.js",
+				"sap/f/DynamicPageTitle.js",
+				"sap/m/App.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MultiInput.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Page.js",
+				"sap/m/Popover.js",
+				"sap/m/SearchField.js",
+				"sap/m/SelectDialog.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/TabContainer.js",
+				"sap/m/TabContainerItem.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/ToggleButton.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/comp/smartfield/SmartLabel.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js",
+				"sap/uxap/ObjectPageHeader.js",
+				"sap/uxap/ObjectPageLayout.js",
+				"sap/uxap/ObjectPageSection.js",
+				"sap/uxap/ObjectPageSubSection.js",
+				"sap/viz/ui5/controls/VizFrame.js",
+				"sap/viz/ui5/controls/common/feeds/FeedItem.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/localService/mockserver.js"
+			],
+			"included": [
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/App.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ContractPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ErrorHandler.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/PurchaseOrderPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/RFQPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/Worklist.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BidderDialog.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BusinessCard.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardCtr.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardPO.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ar.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_bg.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ca.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_cs.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_da.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_de.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_el.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_sappsd.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_saptrc.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_es.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_et.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hu.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_it.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_iw.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ja.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_kk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ko.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lt.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lv.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ms.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_nl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_no.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pt.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ro.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ru.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sh.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sl.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sv.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_th.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_tr.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_uk.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_vi.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_CN.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_TW.properties",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/manifest.json",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/models.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/App.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/ContractPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewItems.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewItems.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewObjectPage.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/PurchaseOrderPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/RFQPreview.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/SosDialog.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/Worklist.view.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/editDialog.fragment.xml"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/Component.js",
+			"size": 1138,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/core/UIComponent.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ErrorHandler.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/models.js"
+			]
+		},
+		{
+			"name": "controller/App-dbg.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/App.controller.js",
+			"size": 1134,
+			"isDebug": true,
+			"required": [
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/localService/mockserver.js"
+			]
+		},
+		{
+			"name": "controller/App.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/App.controller.js",
+			"size": 770,
+			"required": [
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/localService/mockserver.js"
+			]
+		},
+		{
+			"name": "controller/BaseController-dbg.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+			"size": 1930,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "controller/BaseController.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+			"size": 915,
+			"required": [
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "controller/ContractPreview-dbg.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ContractPreview.controller.js",
+			"size": 42768,
+			"isDebug": true,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/ContractPreview.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ContractPreview.controller.js",
+			"size": 25037,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/ErrorHandler-dbg.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ErrorHandler.js",
+			"size": 3041,
+			"isDebug": true,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "controller/ErrorHandler.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ErrorHandler.js",
+			"size": 1386,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "controller/PurchaseOrderPreview-dbg.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/PurchaseOrderPreview.controller.js",
+			"size": 25525,
+			"isDebug": true,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/PurchaseOrderPreview.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/PurchaseOrderPreview.controller.js",
+			"size": 13833,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePopover.js",
+				"sap/m/MessagePopoverItem.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/RFQPreview-dbg.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/RFQPreview.controller.js",
+			"size": 27250,
+			"isDebug": true,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/RFQPreview.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/RFQPreview.controller.js",
+			"size": 15542,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/ServiceManager-dbg.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+			"size": 1843,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ServiceManager.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ServiceManager.js",
+			"size": 886
+		},
+		{
+			"name": "controller/Worklist-dbg.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/Worklist.controller.js",
+			"size": 107436,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/Worklist.controller.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/Worklist.controller.js",
+			"size": 50596,
+			"required": [
+				"sap/ui/core/routing/History.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/BaseController.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js"
+			]
+		},
+		{
+			"name": "fragment/BidderDialog.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BidderDialog.fragment.xml",
+			"size": 1061,
+			"required": [
+				"sap/m/SelectDialog.js",
+				"sap/m/StandardListItem.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "fragment/BusinessCard.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/BusinessCard.fragment.xml",
+			"size": 1555,
+			"required": [
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/Popover.js",
+				"sap/m/StandardListItem.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "fragment/discardCtr.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardCtr.fragment.xml",
+			"size": 606,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Label.js",
+				"sap/m/Popover.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "fragment/discardPO.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/fragment/discardPO.fragment.xml",
+			"size": 628,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Label.js",
+				"sap/m/Popover.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n.properties",
+			"size": 9657,
+			"locale": "",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ar.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ar.properties",
+			"size": 20312,
+			"locale": "ar",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_bg.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_bg.properties",
+			"size": 26234,
+			"locale": "bg",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ca.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ca.properties",
+			"size": 10649,
+			"locale": "ca",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_cs.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_cs.properties",
+			"size": 11240,
+			"locale": "cs",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_da.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_da.properties",
+			"size": 10094,
+			"locale": "da",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_de.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_de.properties",
+			"size": 10258,
+			"locale": "de",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_el.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_el.properties",
+			"size": 25264,
+			"locale": "el",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en.properties",
+			"size": 9528,
+			"locale": "en",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_sappsd.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_sappsd.properties",
+			"size": 30998,
+			"locale": "en_US_sappsd",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_saptrc.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_en_US_saptrc.properties",
+			"size": 12730,
+			"locale": "en_US_saptrc",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_es.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_es.properties",
+			"size": 10535,
+			"locale": "es",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_et.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_et.properties",
+			"size": 9705,
+			"locale": "et",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fi.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fi.properties",
+			"size": 11020,
+			"locale": "fi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fr.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_fr.properties",
+			"size": 10701,
+			"locale": "fr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hi.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hi.properties",
+			"size": 22161,
+			"locale": "hi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hr.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hr.properties",
+			"size": 9936,
+			"locale": "hr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hu.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_hu.properties",
+			"size": 12166,
+			"locale": "hu",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_it.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_it.properties",
+			"size": 10382,
+			"locale": "it",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_iw.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_iw.properties",
+			"size": 18494,
+			"locale": "iw",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ja.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ja.properties",
+			"size": 13963,
+			"locale": "ja",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_kk.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_kk.properties",
+			"size": 24975,
+			"locale": "kk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ko.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ko.properties",
+			"size": 12864,
+			"locale": "ko",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lt.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lt.properties",
+			"size": 10783,
+			"locale": "lt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lv.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_lv.properties",
+			"size": 11584,
+			"locale": "lv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ms.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ms.properties",
+			"size": 9656,
+			"locale": "ms",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_nl.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_nl.properties",
+			"size": 9802,
+			"locale": "nl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_no.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_no.properties",
+			"size": 10036,
+			"locale": "no",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pl.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pl.properties",
+			"size": 11201,
+			"locale": "pl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pt.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_pt.properties",
+			"size": 10853,
+			"locale": "pt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ro.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ro.properties",
+			"size": 10982,
+			"locale": "ro",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ru.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_ru.properties",
+			"size": 23414,
+			"locale": "ru",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sh.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sh.properties",
+			"size": 10219,
+			"locale": "sh",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sk.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sk.properties",
+			"size": 11360,
+			"locale": "sk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sl.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sl.properties",
+			"size": 10032,
+			"locale": "sl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sv.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_sv.properties",
+			"size": 10358,
+			"locale": "sv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_th.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_th.properties",
+			"size": 22176,
+			"locale": "th",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_tr.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_tr.properties",
+			"size": 10933,
+			"locale": "tr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_uk.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_uk.properties",
+			"size": 25635,
+			"locale": "uk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_vi.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_vi.properties",
+			"size": 14715,
+			"locale": "vi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_CN.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_CN.properties",
+			"size": 11694,
+			"locale": "zh_CN",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_TW.properties",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/i18n/i18n_zh_TW.properties",
+			"size": 11453,
+			"locale": "zh_TW",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "localService/metadata.xml",
+			"size": 117305
+		},
+		{
+			"name": "localService/metadata_old.xml",
+			"size": 154232
+		},
+		{
+			"name": "localService/mockserver-dbg.js",
+			"size": 2886,
+			"isDebug": true
+		},
+		{
+			"name": "localService/mockserver.js",
+			"size": 1257
+		},
+		{
+			"name": "localService/vyper_localService/metadata.xml",
+			"size": 127510
+		},
+		{
+			"name": "localService/vyper_localService/metadata_old.xml",
+			"size": 154232
+		},
+		{
+			"name": "localService/vyper_localService/mockserver-dbg.js",
+			"size": 16859,
+			"isDebug": true
+		},
+		{
+			"name": "localService/vyper_localService/mockserver.js",
+			"size": 8746
+		},
+		{
+			"name": "manifest.json",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/manifest.json",
+			"size": 3397
+		},
+		{
+			"name": "model/formatter-dbg.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js",
+			"size": 13945,
+			"isDebug": true
+		},
+		{
+			"name": "model/formatter.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/formatter.js",
+			"size": 6637
+		},
+		{
+			"name": "model/models-dbg.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/models.js",
+			"size": 716,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "model/models.js",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/model/models.js",
+			"size": 471,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "resources.json",
+			"size": 30018
+		},
+		{
+			"name": "version.json",
+			"size": 372
+		},
+		{
+			"name": "view/App.view.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/App.view.xml",
+			"size": 335,
+			"required": [
+				"sap/m/App.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/App.controller.js"
+			]
+		},
+		{
+			"name": "view/ContractPreview.view.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/ContractPreview.view.xml",
+			"size": 3135,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Page.js",
+				"sap/m/TabContainer.js",
+				"sap/m/TabContainerItem.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/uxap/ObjectPageHeader.js",
+				"sap/uxap/ObjectPageLayout.js",
+				"sap/uxap/ObjectPageSection.js",
+				"sap/uxap/ObjectPageSubSection.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/ContractPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewItems.fragment.xml"
+			]
+		},
+		{
+			"name": "view/CtrPreviewGenInfo.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewGenInfo.fragment.xml",
+			"size": 5192,
+			"required": [
+				"sap/m/ComboBox.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/MessageStrip.js",
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/comp/smartfield/SmartLabel.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "view/CtrPreviewItems.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/CtrPreviewItems.fragment.xml",
+			"size": 2847,
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Input.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/HorizontalLayout.js"
+			]
+		},
+		{
+			"name": "view/POPreviewGenInfo.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewGenInfo.fragment.xml",
+			"size": 1762,
+			"required": [
+				"sap/m/ComboBox.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "view/POPreviewItems.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewItems.fragment.xml",
+			"size": 1940,
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/POPreviewObjectPage.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewObjectPage.fragment.xml",
+			"size": 2229,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/uxap/ObjectPageHeader.js",
+				"sap/uxap/ObjectPageLayout.js",
+				"sap/uxap/ObjectPageSection.js",
+				"sap/uxap/ObjectPageSubSection.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewGenInfo.fragment.xml",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewItems.fragment.xml"
+			]
+		},
+		{
+			"name": "view/PurchaseOrderPreview.view.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/PurchaseOrderPreview.view.xml",
+			"size": 1571,
+			"required": [
+				"sap/m/Page.js",
+				"sap/m/TabContainer.js",
+				"sap/m/TabContainerItem.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/PurchaseOrderPreview.controller.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/POPreviewObjectPage.fragment.xml"
+			]
+		},
+		{
+			"name": "view/RFQPreview.view.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/RFQPreview.view.xml",
+			"size": 9047,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Input.js",
+				"sap/m/Link.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/Page.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/comp/smartfield/SmartField.js",
+				"sap/ui/comp/smartfield/SmartLabel.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/uxap/ObjectPageHeader.js",
+				"sap/uxap/ObjectPageLayout.js",
+				"sap/uxap/ObjectPageSection.js",
+				"sap/uxap/ObjectPageSubSection.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/RFQPreview.controller.js"
+			]
+		},
+		{
+			"name": "view/SosDialog.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/SosDialog.fragment.xml",
+			"size": 5408,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Dialog.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/SearchField.js",
+				"sap/m/Table.js",
+				"sap/m/Title.js",
+				"sap/m/ToggleButton.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/viz/ui5/controls/VizFrame.js",
+				"sap/viz/ui5/controls/common/feeds/FeedItem.js"
+			]
+		},
+		{
+			"name": "view/Worklist.view.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/Worklist.view.xml",
+			"size": 17277,
+			"required": [
+				"sap/f/DynamicPage.js",
+				"sap/f/DynamicPageHeader.js",
+				"sap/f/DynamicPageTitle.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/comp/smartvariants/SmartVariantManagement.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js",
+				"ui/ssuite/s2p/mm/pur/pr/prcss/s1/controller/Worklist.controller.js"
+			]
+		},
+		{
+			"name": "view/editDialog.fragment.xml",
+			"module": "ui/ssuite/s2p/mm/pur/pr/prcss/s1/view/editDialog.fragment.xml",
+			"size": 5304,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/MultiInput.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		}
+	]
+}

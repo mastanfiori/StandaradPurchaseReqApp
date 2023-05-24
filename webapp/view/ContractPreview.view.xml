@@ -1,0 +1,60 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:View controllerName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.controller.ContractPreview" xmlns:core="sap.ui.core"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
+	xmlns:table="sap.ui.table" xmlns="sap.m" xmlns:commons="sap.ui.commons" xmlns:objectPage="sap.uxap" xmlns:forms="sap.ui.layout.form"
+	xmlns:purch="ui.ssuite.s2p.mm.pur.pr.prcss.view" height="100%">
+	<Page class="sapUiFioriObjectPage" id="ContractsPreview">
+		<content>
+			<TabContainer items="{/C_PurContrDrftForMngPurReqn}" id="idCtrTabContainer" itemClose="tabitemCloseHandler" itemSelect="tabitemSelect">
+				<items id="idCtrItems">
+					<TabContainerItem id="idTabCtrContainerItem" name="{path:'SerialNumber',formatter:'.formatter.formatCtrDraftId'}">
+						<content>
+							<objectPage:ObjectPageLayout id="CtrObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true" upperCaseAnchorBar="false"
+								showEditHeaderButton="false" showFooter="true">
+								<objectPage:headerTitle>
+									<objectPage:ObjectPageHeader objectTitle="{i18n>NewCtr}" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false"
+										isObjectSubtitleAlwaysVisible="false"></objectPage:ObjectPageHeader>
+								</objectPage:headerTitle>
+								<objectPage:headerContent></objectPage:headerContent>
+								<objectPage:sections>
+									<objectPage:ObjectPageSection title="{i18n>GeneralInfo}">
+										<objectPage:subSections>
+											<objectPage:ObjectPageSubSection id="idCtrGenInfo">
+												<objectPage:blocks>
+													<core:Fragment fragmentName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view.CtrPreviewGenInfo" type="XML"/>
+												</objectPage:blocks>
+											</objectPage:ObjectPageSubSection>
+										</objectPage:subSections>
+									</objectPage:ObjectPageSection>
+									<objectPage:ObjectPageSection title="{i18n>Items}" titleUppercase="false">
+										<objectPage:subSections>
+											<objectPage:ObjectPageSubSection>
+												<objectPage:blocks>
+													<core:Fragment fragmentName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view.CtrPreviewItems" type="XML"/>
+		
+												</objectPage:blocks>
+											</objectPage:ObjectPageSubSection>
+										</objectPage:subSections>
+									</objectPage:ObjectPageSection>
+								</objectPage:sections>
+								<objectPage:footer>
+									<Toolbar>
+										<Button id='idBCtrMsgPopover' icon="sap-icon://message-popup" text="{/messagesLength}" type="Emphasized" press="handleMessagePopoverPress"
+											visible="false"/>
+										<ToolbarSpacer></ToolbarSpacer>
+										<Button type="Emphasized" enabled="true" id="idCtrSubmit" press="handleContractSubmit" text="{i18n>SAVE}"/>
+										<Button enabled="true" id="idCtrCancel" press="fnContractDiscard" text="{i18n>Cancel}"/>
+									</Toolbar>
+								</objectPage:footer>
+							</objectPage:ObjectPageLayout>
+						</content>
+					</TabContainerItem>
+				</items>
+			</TabContainer>
+		</content>
+	</Page>
+</core:View>

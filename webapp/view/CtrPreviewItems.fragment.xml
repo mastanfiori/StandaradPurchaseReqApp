@@ -1,0 +1,56 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:smartTable="sap.ui.comp.smarttable">
+
+	<Table delete="handleDelete" fixedLayout="false" id="idCtrTable" items="{to_PurContrItmDrftForMngPurReqn}" mode="Delete"
+		showSeparators="All">
+		<columns design="Transparent">
+			<Column id="idItem" demandPopin="true" minScreenWidth="Desktop" hAlign="Begin">
+				<Text text="{i18n>ItemId}"/>
+			</Column>
+			<Column id="colMaterial" demandPopin="true" minScreenWidth="Desktop" hAlign="Begin">
+				<Text text="{i18n>Material}"/>
+			</Column>
+			<Column id="colMatrlGrp" demandPopin="true" minScreenWidth="Desktop" hAlign="Begin">
+				<Text text="{i18n>MatGrp}"/>
+			</Column>
+			<Column footer="true" id="colPurReqItems" demandPopin="true" minScreenWidth="Desktop" hAlign="Begin">
+				<Text text="{i18n>REQNO}"/>
+			</Column>
+			<Column hAlign="End" id="colAccAssgnmt" demandPopin="true" minScreenWidth="Desktop" vAlign="Middle">
+				<Text text="{i18n>AccAssgnt}"/>
+			</Column>
+			<Column id="colPlant" demandPopin="true" minScreenWidth="Desktop" hAlign="Begin">
+				<Text text="{i18n>Plant}"/>
+			</Column>
+			<Column id="colTargetQty" demandPopin="true" minScreenWidth="Desktop" hAlign="End">
+				<Text text="{i18n>TrgtQty}"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem press="handleNavToPRFactsheet" type="Active">
+				<ObjectIdentifier class="sapUiSizeCompact" title="{PurchaseContractItem}"/>
+				<HorizontalLayout xmlns="sap.ui.layout">
+					<Text wrapping="true" visible="{path:'Material',formatter:'.formatter.materialTextEnable'}" xmlns="sap.m"
+						text="{parts:[{path:'Material'},{path:'PurchaseContractItemText'}], formatter:'.formatter.formatCtrPRItemDesc'}"/>
+					<Link wrapping="true" visible="{path:'Material',formatter:'.formatter.materialLinkDisable'}" press="handleNavToFactSheet" xmlns="sap.m"
+						text="{parts:[{path:'Material'},{path:'PurchaseContractItemText'}], formatter:'.formatter.formatCtrPRItemDesc'}"/>
+				</HorizontalLayout>
+				<ObjectIdentifier title="{MaterialGroupName}" text="{Materialgroup}"/>
+				<Text text="{parts:[{path:'PurchaseRequisition'},{path:'PurchaseRequisitionItem'}], formatter:'.formatter.formatPrNumItmNum'}"/>
+				<Text class="sapUiSizeCompact" text="{AccountAssignmentCategory}"/>
+				<ObjectIdentifier title="{PlantName}" text="{Plant}"/>
+				<l:HorizontalLayout>
+					<Input class="sapUiSizeCompact" width="150px" value="{TargetQuantity}" change="onChangeTargetQty" type="Number"/>
+
+					<Input class="sapUiSizeCompact" value="{OrderQuantityUnit}" width="50px" editable="false"/>
+				</l:HorizontalLayout>
+			</ColumnListItem>
+		</items>
+	</Table>
+	<!--	</smartTable:SmartTable>-->
+</core:FragmentDefinition>

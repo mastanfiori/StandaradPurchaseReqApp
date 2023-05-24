@@ -1,0 +1,4 @@
+/*
+ * Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+ */
+sap.ui.define([],function(){"use strict";return{activateBO:function(d,b,p,c){var u;if(b==='RFq'){u="/ActivateRFQ";}else if(b==='PO'){u="/CreatePurchaseOrder";}else if(b==='CT'){u="/CreateContract";}var D=c.oApplicationModel;var P={};P.DraftId=d;for(var a in p){P[a]=p[a];}D.callFunction(u,{method:"POST",urlParameters:P,success:jQuery.proxy(c.activateBoSuccess,c),error:jQuery.proxy(c.activateBoFailure,c)});},deleteBOItem:function(d,a,b,c){var u;if(b==='RFq'){u="/DraftRFQItemSet(Draftid=guid'"+d+"',Draftrfqitem=guid'"+a+"')";}else if(b==='PO'){u="/DraftsPOItemSet(DraftId=guid'"+d+"',PoItem='"+a+"')";}else if(b==='CT'){u="/DraftCtrItemSet(Draftid=guid'"+a+"')";}var D=c.getModel();D.remove(u,{success:jQuery.proxy(c.onSuccessRFQDelete,c),error:jQuery.proxy(c.deleteBOItemFailure,c)});}};});

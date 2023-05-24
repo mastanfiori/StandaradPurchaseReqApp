@@ -1,0 +1,13 @@
+{
+  "application": "ui.ssuite.s2p.mm.pur.pr.prcss.s1",
+  "version": "9.0.7",
+  "buildNumber": "56",
+  "buildId": "56",
+  "branch": "detached",
+  "revision": "72a102a3700dded77541ae405778b9ba157ce00c",
+  "GitURL": "",
+  "buildStatus": "${fiori.buildStatus}",
+  "translationComplete": "${fiori.translationComplete}",
+  "cidi": "${fiori.cidi}",
+  "cfdCM": "${fiori.cfdCM}"
+}

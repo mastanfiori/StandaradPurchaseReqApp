@@ -1,0 +1,189 @@
+{
+    "_version": "1.4.0",
+    "sap.app": {
+        "_version": "1.2.0",
+        "id": "ui.ssuite.s2p.mm.pur.pr.prcss.s1",
+        "type": "application",
+        "resources": "resources.json",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "9.0.7"
+        },
+        "ach": "MM-FIO-PUR-REQ-SOC",
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/MM_PUR_PR_PROCESS_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            }
+        },
+        "sourceTemplate": {
+            "id": "sap.ui.ui5-template-plugin.1worklist",
+            "version": "1.44.6",
+            "toolsId": "f58f3785-94f5-4b89-bd83-54aa6937662b"
+        }
+    },
+    "sap.fiori": {
+        "_version": "1.1.0",
+        "registrationIds": [
+            "F1048"
+        ],
+        "archeType": "transactional"
+    },
+    "sap.ui": {
+        "_version": "1.2.0",
+        "technology": "UI5",
+        "icons": {
+            "icon": "sap-icon://task",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "fullWidth": true,
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.2.0",
+        "rootView": {
+            "viewName": "ui.ssuite.s2p.mm.pur.pr.prcss.s1.view.App",
+            "type": "XML",
+            "id": "app"
+        },
+        "dependencies": {
+            "minUI5Version": "1.90.7",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {
+                    "lazy": true
+                },
+                "sap.ushell": {
+                    "lazy": false
+                },
+                "sap.ui.comp": {
+                    "lazy": true
+                },
+                "sap.ca.ui": {
+                    "lazy": false
+                },
+                "sap.suite.ui.commons": {
+                    "lazy": false
+                },
+                "sap.ui.unified": {
+                    "lazy": false
+                },
+                "sap.uxap": {
+                    "lazy": true
+                },
+                "sap.viz": {
+                    "lazy": true
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ui.ssuite.s2p.mm.pur.pr.prcss.s1.i18n.i18n"
+                }
+            },
+            "": {
+                "preload": true,
+                "dataSource": "mainService",
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "metadataUrlParams": {
+                        "sap-documentation": "heading"
+                    }
+                }
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "ui.ssuite.s2p.mm.pur.pr.prcss.s1.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "bypassed": {
+                    "target": [
+                        "notFound"
+                    ]
+                },
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "worklist",
+                    "target": [
+                        "worklist"
+                    ]
+                },
+                {
+                    "pattern": "PurchaseOrderPreview",
+                    "name": "PurchaseOrderPreview",
+                    "target": [
+                        "PurchaseOrderPreview"
+                    ]
+                },
+                {
+                    "pattern": "ContractPreview",
+                    "name": "ContractPreview",
+                    "target": [
+                        "ContractPreview"
+                    ]
+                },
+                {
+                    "pattern": "RFQPreview/{RFQid}",
+                    "name": "RFQPreview",
+                    "target": [
+                        "RFQPreview"
+                    ]
+                }
+            ],
+            "targets": {
+                "worklist": {
+                    "viewName": "Worklist",
+                    "viewId": "worklist",
+                    "viewLevel": 1,
+                    "title": "{i18n>appTitle}"
+                },
+                "PurchaseOrderPreview": {
+                    "viewName": "PurchaseOrderPreview",
+                    "viewLevel": 2,
+                    "viewId": "PurchaseOrderPreview"
+                },
+                "ContractPreview": {
+                    "viewName": "ContractPreview",
+                    "viewLevel": 2,
+                    "viewId": "ContractPreview"
+                },
+                "RFQPreview": {
+                    "viewName": "RFQPreview",
+                    "viewLevel": 2,
+                    "viewId": "RFQPreview"
+                }
+            }
+        }
+    }
+}

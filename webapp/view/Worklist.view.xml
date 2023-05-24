@@ -1,0 +1,287 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+	xmlns:table="sap.ui.table" xmlns="sap.m" xmlns:f="sap.f" xmlns:sv="sap.ui.comp.smartvariants" xmlns:smartlink="sap.ui.comp.navpopover"
+	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	controllerName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.controller.Worklist"
+	 xmlns:footerbar="sap.ushell.ui.footerbar">
+	<f:DynamicPage id="page" navButtonPress="onNavBack" showNavButton="true" title="{i18n>appTitle}">
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<sv:SmartVariantManagement id="idVariant" persistencyKey="F1048.controller.Worklist" showCreateTile="true" showShare="true" showExecuteOnSelection="true"/>
+				</f:heading>
+					<f:navigationActions>
+						<footerbar:AddBookmarkButton id ="shareTile" title="{i18n>appTitle}" />
+					</f:navigationActions>
+			</f:DynamicPageTitle> 
+		</f:title>
+		<f:header>
+			<f:DynamicPageHeader>
+				<f:content>
+					<smartfilterbar:SmartFilterBar smartVariant="idVariant" basicSearchFieldName="searchField" enableBasicSearch="true" class="sapUiSizeCompact" 
+						entitySet="C_Purchasereqitmdtlsext" id="idSmartFilterPR" initialise="onInitSmartFilterBar" persistencyKey="F1048.controller.Worklist.SmartFilterKey" reset="doReload"
+						search="onBeforeRebindTable" useToolbar="false">
+						<smartfilterbar:controlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" groupId="_BASIC" hasValueHelpDialog="true" index="1" key="Plant"
+								label="{i18n>Plant}" preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" groupId="_BASIC" hasValueHelpDialog="true" index="2" key="PurchasingGroup"
+								label="{i18n>PurgGrp}" preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" groupId="_BASIC" hasValueHelpDialog="true" index="3" key="PurchasingOrganization"
+								label="{i18n>PurgOrg}" preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" groupId="_BASIC" hasValueHelpDialog="true" index="4" key="MaterialGroup"
+								label="{i18n>MatGrp}" preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" groupId="_BASIC" hasValueHelpDialog="true" key="ProcessingStatus"
+								label="{i18n>Status}" preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" hasValueHelpDialog="true" key="Purchaserequisitionitemtext" label="{i18n>DESC}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" hasValueHelpDialog="true" key="Material" label="{i18n>Material}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration controlType="auto" hasValueHelpDialog="true" key="Supplier" label="{i18n>Supplier}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true"></smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration id="dateRangefilterCHR1" groupId="_BASIC" index="7" key="DeliveryDate" label="{i18n>itemDelivDate}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true" visibleInAdvancedArea = "true" 
+								conditionType = "{
+									module: 'sap.ui.comp.config.condition.DateRangeType',
+									    ignoreTime: false,
+									    operations: {
+									        filter: [
+									            {
+									                path: 'key',
+									                contains: 'TODAYFROMTO',
+									                exclude: true
+									            }
+									            
+									        ]
+									    }
+									}">
+							</smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration id="dateRangefilterCHR2" groupId="_BASIC" index="8" key="PerformancePeriodStartDate" label="{i18n>SDate}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true" visibleInAdvancedArea = "true" 
+								conditionType = "{
+									module: 'sap.ui.comp.config.condition.DateRangeType',
+									    ignoreTime: false,
+									    operations: {
+									        filter: [
+									            {
+									                path: 'key',
+									                contains: 'TODAYFROMTO',
+									                exclude: true
+									            }
+									            
+									        ]
+									    }
+									}">
+							</smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration id="dateRangefilterCHR3" groupId="_BASIC" index="9" key="PerformancePeriodEndDate" label="{i18n>EDate}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true" visibleInAdvancedArea = "true" 
+								conditionType = "{
+									module: 'sap.ui.comp.config.condition.DateRangeType',
+									    ignoreTime: false,
+									    operations: {
+									        filter: [
+									            {
+									                path: 'key',
+									                contains: 'TODAYFROMTO',
+									                exclude: true
+									            }
+									            
+									        ]
+									    }
+									}">
+							</smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration id="dateRangefilterCHR4" groupId="_BASIC" index="10" key="PurchaseRequisitionReleaseDate" label="{i18n>RelDate}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true" visibleInAdvancedArea = "true" 
+								conditionType = "{
+									module: 'sap.ui.comp.config.condition.DateRangeType',
+									    ignoreTime: false,
+									    operations: {
+									        filter: [
+									            {
+									                path: 'key',
+									                contains: 'TODAYFROMTO',
+									                exclude: true
+									            }
+									            
+									        ]
+									    }
+									}">
+							</smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration id="dateRangefilterCHR5" groupId="_BASIC" index="11" key="PurReqCreationDate" label="{i18n>ReqDate}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true" visibleInAdvancedArea = "true" 
+								conditionType = "{
+									module: 'sap.ui.comp.config.condition.DateRangeType',
+									    ignoreTime: false,
+									    operations: {
+									        filter: [
+									            {
+									                path: 'key',
+									                contains: 'TODAYFROMTO',
+									                exclude: true
+									            }
+									            
+									        ]
+									    }
+									}">
+							</smartfilterbar:ControlConfiguration>
+							<smartfilterbar:ControlConfiguration id="dateRangefilterCHR6" groupId="_BASIC" index="12" key="FirstDeliveryDate" label="{i18n>DD}"
+								preventInitialDataFetchInValueHelpDialog="false" visible="true" visibleInAdvancedArea = "true" 
+								conditionType = "{
+									module: 'sap.ui.comp.config.condition.DateRangeType',
+									    ignoreTime: false,
+									    operations: {
+									        filter: [
+									            {
+									                path: 'key',
+									                contains: 'TODAYFROMTO',
+									                exclude: true
+									            }
+									            
+									        ]
+									    }
+									}">
+							</smartfilterbar:ControlConfiguration>
+						</smartfilterbar:controlConfiguration>
+					</smartfilterbar:SmartFilterBar>
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+		<f:content>
+			<smartTable:SmartTable smartVariant="idVariant" class="sapFioriListReportSmartTable" enableCustomFilter="true" enableAutoBinding="false"
+				entitySet="C_Purchasereqitmdtlsext" header="{i18n>PurReqn}" id="idSmartTablePR" persistencyKey="F1048.controller.Worklist.SmartTablekey"
+				showRowCount="true" useExportToExcel="true" useTablePersonalisation="true" tableType="ResponsiveTable"
+				beforeRebindTable="onBeforeRebindTable" smartFilterId="idSmartFilterPR" placeToolbarInTable="true"
+				requestAtLeastFields="PurchasingOrganization,PurchasingGroup,PurchasingDocumentItemCategory,CityName,Country,ProductType,PurchaseRequisitionReleaseDate,FirstDeliveryDate,DueDays,District,FullName,HouseNumber,PurReqnPrice,PurReqnHasFllwOnDoc,Plant,AccountAssignmentCategory,MaterialGroup,Material,RequestedQuantity,ConsumptionPosting,PurchaseRequisitionType,PurchasingDocumentSubtype,PerformancePeriodEndDate,FixedSupplier,PerformancePeriodStartDate,PurReqnCmpltnsCat,Supplier,PurchaseContract,PurchaseContractItem,PurchasingInfoRecord"
+				ignoredFields="PurReqnHasFllwOnDoc,ProcessingStatus,RequestedQuantity,PurchaseRequisitionItemText,PurReqnSourceOfSupplyType,FirstDeliveryDate,AccountAssignmentCategory,ConsumptionPosting,PurchasingOrganization,Plant,DeliveryDate,MaterialGroup"
+				demandPopin="true" useVariantManagement="true">
+				<smartTable:customToolbar>
+					<OverflowToolbar design="Transparent">
+						<ToolbarSpacer/>
+						<Button enabled="true" id="CreateCTR" press="onPressCreateDraftCTR" text="{i18n>CREATE_CTR}"/>
+						<Button enabled="true" id="CreateRFQ" press="onPressCreateDraftRFQ" text="{i18n>CREATE_RFQ}"/>
+						<Button enabled="true" id="CreatePO" press="onPressCreateDraftPO" text="{i18n>CREATE_PO}"/>
+					</OverflowToolbar>
+				</smartTable:customToolbar>
+				<Table width="auto" enableBusyIndicator="true" growing="true" growingScrollToLoad="true" growingThreshold="15" id="idPRItemTable"
+					mode="MultiSelect" selectionChange="CreateButtonsEnableCheck" sticky="ColumnHeaders,HeaderToolbar">
+					<columns>
+						<Column id="idPurReqnColumn" hAlign="Begin">
+							<Text text="{i18n>PurReqnItem}" id="PurReqnColumnTitle"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idPurReqnColumnKey", "leadingProperty":"PurchaseRequisition","additionalProperty":"PurchaseRequisitionItem", "sortProperty":"PurchaseRequisition", "filterProperty":"PurchaseRequisition" }'/>
+							</customData>
+						</Column>
+						<Column id="idMaterialColumn" hAlign="Begin">
+							<Text text="{i18n>Material}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idMaterialyColumnKey", "leadingProperty":"Material", "additionalProperty":"PurchaseRequisitionItemText", "sortProperty":"Material", "filterProperty":"Material" }'/>
+							</customData>
+						</Column>
+						<Column id="idMatGrpColumn" hAlign="Begin">
+							<Text text="{i18n>MatGrp}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idMatGrpColumnKey", "leadingProperty":"MaterialGroup", "additionalProperty":"MaterialGroupName", "sortProperty":"MaterialGroup", "filterProperty":"MaterialGroup" }'/>
+							</customData>
+						</Column>
+						<Column id="idQuantityColumn" hAlign="End">
+							<Text text="{i18n>Quantity}" id="unitColumnTitle"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idQuantityColumnKey", "leadingProperty":"RequestedQuantity", "additionalProperty":"BaseUnit", "sortProperty":"RequestedQuantity", "filterProperty":"RequestedQuantity" }'/>
+							</customData>
+						</Column>
+						<Column id="idPOQuantityColumn" hAlign="End">
+							<Text text="{i18n>POQuantity}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idPOQuantityColumnKey", "leadingProperty":"OrderedQuantity", "additionalProperty":"BaseUnit", "sortProperty":"OrderedQuantity", "filterProperty":"OrderedQuantity" }'/>
+							</customData>
+						</Column>
+						<Column id="idPriceColumn" hAlign="End">
+							<Text text="{i18n>TotalPrice}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idPriceColumnKey", "leadingProperty":"PurReqnPrice", "additionalProperty":"PurReqnItemCurrency", "sortProperty":"PurReqnPrice", "filterProperty":"PurReqnPrice" }'/>
+							</customData>
+						</Column>
+						<Column id="idSOSColumn" hAlign="Begin">
+							<Text text="{i18n>AssignedSupp}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idSOSColumnKey", "leadingProperty":"Supplier", "additionalProperty":"PurReqnSourceOfSupplyCount,FixedSupplier,SupplierName", "sortProperty":"FixedSupplier", "filterProperty":"FixedSupplier" }'/>
+							</customData>
+						</Column>
+						<Column id="idDelivDateColumn" hAlign="Center">
+							<Text text="{i18n>DelivDate}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idPurReqnDelDateColumnKey", "leadingProperty":"DeliveryDate", "sortProperty":"DeliveryDate", "filterProperty":"DeliveryDate", "type": "date" }'/>
+							</customData>
+						</Column>
+						<Column id="idPlant" hAlign="Begin">
+							<Text text="{i18n>Plant}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idPlantColumnKey", "leadingProperty":"Plant", "additionalProperty":"SupplyingPlantName", "sortProperty":"Plant", "filterProperty":"Plant" }'/>
+							</customData>
+						</Column>
+						<Column id="idStatusColumn" hAlign="Begin">
+							<Text text="{i18n>Status}"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idStatusColumnKey", "leadingProperty":"ProcessingStatus", "additionalProperty":"ProcessingStatusName", "sortProperty":"ProcessingStatusName", "filterProperty":"ProcessingStatusName" }'/>
+							</customData>
+						</Column>
+						<Column id="idEditButtonColumn" hAlign="Center" demandPopin="true" popinDisplay="WithoutHeader">
+							<Text text="{i18n>Edit}" visible="false"/>
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey":"idEditColumnKey", "leadingProperty":"OrderedQuantity" }'/>
+							</customData>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem type="Navigation" press="onPressPurReqn">
+							<cells>
+								<ObjectIdentifier title="{parts:[{path:'PurchaseRequisition'},{path:'PurchaseRequisitionItem'}], formatter:'.formatter.formatPRItmNum'}"/>
+								<HorizontalLayout xmlns="sap.ui.layout" allowWrapping="true">
+									<Text wrapping="true" visible="{path:'Material',formatter:'.formatter.materialTextEnable'}" xmlns="sap.m"
+										text="{parts:[{path:'PurchaseRequisitionItemText'},{path:'Material'}], formatter:'.formatter.formatPRItemDesc'}"/>
+									<Link wrapping="true" visible="{path:'Material',formatter:'.formatter.materialLinkDisable'}" press="onPressMaterialFactSheet" xmlns="sap.m"
+										text="{parts:[{path:'PurchaseRequisitionItemText'},{path:'Material'}], formatter:'.formatter.formatPRItemDesc'}"/>
+								</HorizontalLayout>
+								<ObjectIdentifier text="{MaterialGroup}" title="{MaterialGroupName}"/>
+								<Text text="{parts:[{path:'RequestedQuantity'},{path:'BaseUnit'}], formatter: '.formatter.formatNumberAndNumUnit' }"/>
+								<Text text="{parts:[{path:'OrderedQuantity'},{path:'BaseUnit'}], formatter: '.formatter.formatNumberAndNumUnit' }"/>
+								<Text text="{parts:[{path:'PurReqnPrice'},{path:'PurReqnItemCurrency'}], formatter: '.formatter.formatNumberAndNumUnit' }"/>
+								<VerticalLayout xmlns="sap.ui.layout">
+									<Link wrapping="true" id="businessCard" press="onPressSuppBusinessCard"
+										text="{parts:[{path:'FixedSupplier'},{path:'Supplier'},{path:'SupplierName'}],formatter:'.formatter.formatSelectSupplier'}" xmlns="sap.m"/>
+									<HorizontalLayout xmlns="sap.ui.layout">
+										<Text text="{path:'i18n>OutOf',formatter:'.formatter.formatDisplayLinkOutOf'}"
+											visible="{path:'FixedSupplier',formatter:'.formatter.formatLinkText'}" xmlns="sap.m"/>
+										<Label visible="{path:'FixedSupplier',formatter:'.formatter.formatLinkText'}" xmlns="sap.m"/>
+										<Link enabled="{path: 'PurReqnSourceOfSupplyCount', formatter:'.formatter.formatLinkDisable'}" id="linkSOSPRList" press='handleSoSDialog'
+											text="{parts:[{path:'PurReqnSourceOfSupplyCount'},{path:'i18n>Sources'}],formatter:'.formatter.formatDisplayText'}" xmlns="sap.m"/>
+										<Text text="{path:'i18n>OutOf',formatter:'.formatter.formatDisplayLinkBracket'}"
+											visible="{path:'FixedSupplier',formatter:'.formatter.formatLinkText'}" xmlns="sap.m"/>
+									</HorizontalLayout>
+								</VerticalLayout>
+								<Text text="{path:'DeliveryDate',formatter:'.formatter.formatDate'}"/>
+								<ObjectIdentifier text="{Plant}" title="{SupplyingPlantName}"/>
+								<Text wrapping="true" text="{ProcessingStatusName}"/>
+								<Button icon="sap-icon://edit" press="onPressEdit" type="Transparent" tooltip="{i18n>Edit}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</smartTable:SmartTable>
+		</f:content>
+	</f:DynamicPage>
+</core:View>

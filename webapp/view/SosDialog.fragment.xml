@@ -1,0 +1,91 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" controllerName="ui.ssuite.s2p.mm.pur.pr.prcss.s1.view.Worklist"
+	xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data">
+	<Dialog contentWidth="50%">
+		<customHeader>
+			<OverflowToolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Title text="{parts:[{path:'i18n>SoSTitleOne'},{path:'i18n>SoSTitleTwo'}],formatter:'.formatter.formatitext'}" level="H2"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<ToggleButton text="{@i18n>Table}" press="onPressSwitchTable" visible="true" pressed="true" iconFirst="true" icon="sap-icon://table-view"></ToggleButton >
+				<ToggleButton text="{@i18n>Chart}" press="onPressSwitchChart" enabled="true" pressed="false" visible="true" icon="sap-icon://bubble-chart"
+					iconFirst="true"></ToggleButton >
+				<ToggleButton text="{@i18n>Legend}" press="onPressLegendEnable" enabled="true" pressed="true" visible="false" icon="sap-icon://legend"
+					iconFirst="true"></ToggleButton >
+			</OverflowToolbar>
+		</customHeader>
+		<content>
+			<VBox>
+				<SearchField width="90%" class="sapUiSmallMargin" search="onSoSSearch" id="idSoSSearch"/>
+				<Table noDataText="{i18n>NoDataText}" mode="SingleSelectLeft" growing="true" growingScrollToLoad="true" growingThreshold="15"
+					rememberSelections='true' id="idList" selectionChange="onTableSelect" items="{/SourceOfSupplySet}">
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{parts:[{path:'NAME'},{path:'LIFNR'}],formatter:'.formatter.formatAcct'}"
+								text="{parts:[{path:'i18n>Infr'},{path:'INFNR'},{path:'i18n>Contract'},{path:'EBELN'},{path:'i18n>Scheduling'},{path:'VRTYP'},{path:'i18n>OrderUnit'},{path:'MEINS'}], formatter:'.formatter.formatSosInfoCtr'}"/>
+							<ObjectIdentifier title="{parts:[{path:'i18n>TOTAL'},{path:'GRPR'},{path:'WAERS'}], formatter:'.formatter.formatSoSTotalPrice'}"
+								text="{parts:[{path:'KDATB'},{path:'KDATE'}], formatter:'.formatter.formatSoSDate'}"/>
+						</cells>
+					</ColumnListItem>
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true"></Column>
+						<Column hAlign="Right"></Column>
+					</columns>
+				</Table>
+				<viz:VizFrame width="100%" uiConfig="{applicationSet: 'fiori'}" vizType="bubble"
+					vizProperties="{ title: {visible: false}, valueAxis: {title: {visible: true }}, categoryAxis: {title: {visible: true } }, interaction: {selectability: {mode: 'exclusive'}}, dataLabel: {visible: true}, general: {groupData: false} }"
+					legendVisible="true" selectData="onChartSelect" renderComplete="onChartRenderComplete">
+					<!--<viz:dataset>-->
+					<!--	<viz.data:FlattenedDataset >-->
+					<!--		<viz.data:dimensions>-->
+					<!--			<viz.data:DimensionDefinition  name="NAME" value="{NAME}" />-->
+					<!--			<viz.data:DimensionDefinition  name="EBELN" value="{EBELN}" />-->
+					<!--<viz.data:DimensionDefinition name="CalendarMonth" value="{CalendarMonth}"></viz.data:DimensionDefinition> -->
+					<!--		</viz.data:dimensions>-->
+					<!--		<viz.data:measures>-->
+					<!--			<viz.data:MeasureDefinition  name="Score" value="{Score}" />-->
+					<!--			<viz.data:MeasureDefinition name="NETPR" value="{NETPR}" />-->
+					<!--			<viz.data:MeasureDefinition name="TotalSpend" value="{TotalSpend}" />-->
+					<!--		</viz.data:measures>-->
+					<!--	</viz.data:FlattenedDataset>-->
+					<!--</viz:dataset>-->
+					<viz:feeds>
+						<!--<viz.feeds:FeedItem uid="primaryValues" type="Measure" values="GRPR" />-->
+						<viz.feeds:FeedItem uid="color" type="Dimension" values="Supplier"/>
+						<!--<viz.feeds:FeedItem uid="shape" type="Dimension" values="EBELN" />-->
+						<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Score"/>
+						<viz.feeds:FeedItem uid="valueAxis2" type="Measure" values="NETPR"/>
+						<viz.feeds:FeedItem uid="bubbleWidth" type="Measure" values="TotalSpend"/>
+					</viz:feeds>
+				</viz:VizFrame>
+			</VBox>
+		</content>
+		<endButton>
+			<Button press="handleClose" text="{i18n>Cancel}" iconFirst="false"/>
+		</endButton>
+	</Dialog>
+	<!--<TableSelectDialog noDataText="{i18n>NoDataText}"-->
+	<!--	title="{parts:[{path:'i18n>SoSTitleOne'},{path:'i18n>SoSTitleTwo'}],formatter:'.formatter.formatitext'}"-->
+	<!--	rememberSelections='true' contentWidth="40%" id="idList" contentHeight="40%" search="onSoSSearch" confirm="onSosConfirm" cancel="handleClose"-->
+	<!--	items="{/SourceOfSupplySet}">-->
+	<!--	<ColumnListItem>-->
+	<!--		<cells>-->
+	<!--			<ObjectIdentifier title="{parts:[{path:'NAME'},{path:'LIFNR'}],formatter:'.formatter.formatAcct'}"-->
+	<!--				text="{parts:[{path:'i18n>Infr'},{path:'INFNR'},{path:'i18n>Contract'},{path:'EBELN'},{path:'i18n>Scheduling'},{path:'VRTYP'}], formatter:'.formatter.formatSosInfoCtr'}"/>-->
+	<!--			<ObjectIdentifier-->
+	<!--				title="{parts:[{path:'i18n>TOTAL'},{path:'GRPR'},{path:'WAERS'}], formatter:'.formatter.formatSoSTotalPrice'}"-->
+	<!--				text="{parts:[{path:'KDATB'},{path:'KDATE'}], formatter:'.formatter.formatSoSDate'}"/>-->
+	<!--		</cells>-->
+	<!--	</ColumnListItem>-->
+	<!--	<columns>-->
+	<!--		<Column minScreenWidth="Tablet" demandPopin="true">-->
+	<!--		</Column>-->
+	<!--		<Column hAlign="Right"></Column>-->
+	<!--	</columns>-->
+	<!--</TableSelectDialog>-->
+</core:FragmentDefinition>

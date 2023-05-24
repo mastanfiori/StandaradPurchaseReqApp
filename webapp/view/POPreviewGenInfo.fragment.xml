@@ -1,0 +1,29 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
+	<forms:SimpleForm maxContainerCols="4" editable="true" layout="ResponsiveGridLayout">
+		<l:VerticalLayout>
+			<Title text=""/>
+			<Label text="{i18n>Supplier}"></Label>
+			<Link class="headerSpace" id="businessPurchaseOrderPreview" press="handleBusinessCard"
+				text="{parts:[{path:'SupplierName'},{path:'Supplier'}], formatter:'.formatter.formatDescMatnr'}"/>
+			<Label text="{i18n>POType}" class="sapUiSizeCompact sapUiTinyMarginTop" labelFor="idCBPOTypes" required="true"/>
+			<ComboBox selectionChange="onPOTypeChange" class="sapUiSizeCompact" id='idCBPOTypes' selectedKey=""
+				value="{parts:[{path:'PurchaseOrderType'},{path:'PurchasingDocumentTypeName'}], formatter:'.formatter.formatPOType'}"
+				items="{path:'/C_PurchaseOrderTypeValueHelp',suspended: true}" width="200px" loadItems="comboFill">
+				<core:Item key="{PurchaseOrderType}"
+					text="{parts:[{path:'PurchaseOrderType'},{path:'PurchaseOrderType_Text'}], formatter:'.formatter.formatPOType'}"/>
+			</ComboBox>
+		</l:VerticalLayout>
+		<l:VerticalLayout>
+			<Title text=""/>
+			<Label text="{i18n>PurgGrp}" class="sapUiSizeCompact sapUiTinyMarginTop"></Label>
+			<Text text="{parts:[{path:'PurchasingGroupName'},{path:'PurchasingGroup'}], formatter:'.formatter.formatDescMatnr'}"/>
+			<Label text="{i18n>PurgOrg}" class="sapUiSizeCompact sapUiTinyMarginTop"></Label>
+			<Text text="{parts:[{path:'PurchasingOrganizationName'},{path:'PurchasingOrganization'}], formatter:'.formatter.formatDescMatnr'}"/>
+		</l:VerticalLayout>
+	</forms:SimpleForm>
+</core:FragmentDefinition>
